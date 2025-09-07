@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Usuários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Usuários</h1>
+        
+        <div class="form-container">
+            <h2>Adicionar Usuário</h2>
+            <form id="userForm">
+                <input type="text" id="name" placeholder="Nome" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="number" id="age" placeholder="Idade">
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+
+        <div class="users-container">
+            <h2>Lista de Usuários</h2>
+            <div id="usersList"></div>
+        </div>
+    </div>
+<!-- Modal de Edição -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Editar Usuário</h2>
+        <form id="editForm">
+            <input type="hidden" id="editId">
+            <div class="form-group">
+                <label for="editName">Nome:</label>
+                <input type="text" id="editName" required>
+            </div>
+            <div class="form-group">
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="editAge">Idade:</label>
+                <input type="number" id="editAge">
+            </div>
+            <div class="form-actions">
+                <button type="button" class="cancel-btn">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
