@@ -1,11 +1,13 @@
-const API_URL = 'http://localhost:3001/api/users';
+const API_URL = 'https://kaio-developer.onrender.com/api/users';
 
 class UserManager {
-    constructor() {
+       constructor() {
+        this.API_URL = window.location.hostname.includes('localhost') 
+            ? 'http://localhost:3001/api/users'
+            : 'https://kaio-developer.onrender.com/api/users';
         this.currentEditId = null;
         this.init();
     }
-
     init() {
         this.loadUsers();
         this.setupEventListeners();
